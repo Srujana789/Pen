@@ -22,42 +22,57 @@ public static class SeedData
             context.Pens.AddRange(
                 new Pens
                 {
-                    Name = "Seiko",
-                    Year = DateTime.Parse("1989-2-12"),
-                    InkType = "Water",
-                    Color = "Blue",
-                    Price = 230
-                },
-                new Pens
-                {
-                    Name = "Pheonix",
-                    Year = DateTime.Parse("1989-2-23"),
-                    InkType = "Gel",
-                    Color = "Black",
-                    Price = 299
-                },
-                new Pens
-                {
                     Name = "Astra",
-                    Year = DateTime.Parse("2000-2-07"),
-                    InkType = "Oil",
-                    Color = "Green",
-                    Price = 799
-                },
-                new Pens
-                {
-                    Name = "Monster",
-                    Year = DateTime.Parse("2021-2-23"),
-                    InkType = "Water",
-                    Color = "Red",
+                    InkType = "Gel",
+                    Year = DateTime.Parse("2024-5-22"),
+
+                    Color = "Blue",
+                    Material = "Plastic",
+                    Retractable = "Yes",
                     Price = 400
                 },
                 new Pens
                 {
                     Name = "Kidzee",
-                    Year = DateTime.Parse("2024-5-22"),
                     InkType = "Gel",
+                    Year = DateTime.Parse("2024-5-22"),
+
                     Color = "Black",
+                    Material = "Wood",
+                    Retractable = "Yes",
+                    Price = 400
+                },
+                new Pens
+                {
+                    Name = "Phoenix",
+                    InkType = "Water",
+                    Year = DateTime.Parse("2024-5-22"),
+
+                    Color = "Black",
+                    Material = "Silicon",
+                    Retractable = "Yes",
+                    Price = 799
+                },
+                new Pens
+                {
+                    Name = "Monster",
+                    InkType = "Gel",
+                    Year = DateTime.Parse("2024-5-22"),
+
+                    Color = "Black",
+                    Material = "Wood",
+                    Retractable = "Yes",
+                    Price = 400
+                },
+                new Pens
+                {
+                    Name = "Easybee",
+                    InkType = "Gel",
+                    Year = DateTime.Parse("2024-5-22"),
+                    
+                    Color = "Black",
+                    Material = "Wood",
+                    Retractable = "Yes",
                     Price = 400
                 }
             );
