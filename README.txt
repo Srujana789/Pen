@@ -128,7 +128,7 @@ Started creating Gihub
 14:14 DONE!!!
 
 14:15
-Adding search capabilities by editting the Controllers/MoviesController.cs
+Adding search capabilities by editting the Controllers/PenController.cs
 
 14:20
 Tested!!
@@ -158,7 +158,7 @@ Testing...
 SUCCESS! :)
 
 15:32
-Attempting to add the movies link to the template
+Attempting to add the pen link to the template
 Lots of things to add and templates to fill
 
 15:40
@@ -166,11 +166,10 @@ Successfully added
 
 15:42
 Testing- I tried adding making the edits based onthe tutorial
-edited the Views/movies/create.cshtml successfully
+edited the Views/Pen/create.cshtml successfully
 
 15:50
-edited and tested the rating Views/movies/edit.cshtml
-
+edited and tested 
 15:54
 SUCCESSFULLY DONE!!
 
@@ -180,13 +179,13 @@ Successfully pushed to Git
 
 
 2024-06-13
-13:10
+10:10
 Tested my project to veriy it still works (BUILD and RUN)
 BREAK :O
 
-14:34
+11:34
 Project works succesfully
 PUSHing to Git
 
-15:24
-I added to the movie database successfully
+12:24
+I added to the Pen database successfully
