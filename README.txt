@@ -79,7 +79,7 @@ Resolved it by debugging the MoviesController.cs file on line 10
 14:22
 Added and updated Migration using Package manager Console
 Generated Migrations/{timestamp}_InitialCreate.cs 
-timestamp  20240523182044_InitialCreate.cs
+timestamp  20240613154442_InitialCreate.cs
 
 14:40
 Reviewed the database connection string appsettings.json
