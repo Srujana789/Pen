@@ -5,95 +5,92 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Pen.Data;
-using Pen.Models;
+using Orion_Pens.Data;
+using Orion_Pens.Models;
 
-namespace Pen.Controllers
+namespace Orion_Pens.Controllers
 {
-    public class Home : Controller
+    public class ProductsController : Controller
     {
-        private readonly PenContext _context;
+        private readonly Orion_PensContext _context;
 
-        public Home(PenContext context)
+        public ProductsController(Orion_PensContext context)
         {
             _context = context;
         }
 
-        // GET: Pens
-        //public async Task<IActionResult> Index()
-        //{
-        //    return _context.Pens != null ?
-        //                View(await _context.Pens.ToListAsync()) :
-        //                Problem("Entity set 'PenContext.Pens'  is null.");
-        //}
-        public IActionResult Index()
+        // GET: Products
+        public async Task<IActionResult> Index()
         {
-            return View();
+              return _context.Products != null ? 
+                          View(await _context.Products.ToListAsync()) :
+                          Problem("Entity set 'Orion_PensContext.Products'  is null.");
         }
-        // GET: Pens/Details/5
+
+        // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Pens == null)
+            if (id == null || _context.Products == null)
             {
                 return NotFound();
             }
 
-            var pens = await _context.Pens
+            var products = await _context.Products
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (pens == null)
+            if (products == null)
             {
                 return NotFound();
             }
 
-            return View(pens);
+            return View(products);
         }
 
-        // GET: Pens/Create
+        // GET: Products/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Pens/Create
+        // POST: Products/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,InkType,Year,Color,Material,Retractable,Price")] Pens pens)
+        public async Task<IActionResult> Create([Bind("Id,Name,InkType,Year,Color,Material,Retractable,Price")] Products products)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(pens);
+                _context.Add(products);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(pens);
+            return View(products);
         }
 
-        // GET: Pens/Edit/5
+        // GET: Products/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Pens == null)
+            if (id == null || _context.Products == null)
             {
                 return NotFound();
             }
 
-            var pens = await _context.Pens.FindAsync(id);
-            if (pens == null)
+            var products = await _context.Products.FindAsync(id);
+            if (products == null)
             {
                 return NotFound();
             }
-            return View(pens);
+            return View(products);
         }
 
-        // POST: Pens/Edit/5
+        // POST: Products/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,InkType,Year,Color,Material,Retractable,Price")] Pens pens)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,InkType,Year,Color,Material,Retractable,Price")] Products products)
         {
-            if (id != pens.Id)
+            if (id != products.Id)
             {
                 return NotFound();
             }
@@ -102,12 +99,12 @@ namespace Pen.Controllers
             {
                 try
                 {
-                    _context.Update(pens);
+                    _context.Update(products);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PensExists(pens.Id))
+                    if (!ProductsExists(products.Id))
                     {
                         return NotFound();
                     }
@@ -118,49 +115,49 @@ namespace Pen.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(pens);
+            return View(products);
         }
 
-        // GET: Pens/Delete/5
+        // GET: Products/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Pens == null)
+            if (id == null || _context.Products == null)
             {
                 return NotFound();
             }
 
-            var pens = await _context.Pens
+            var products = await _context.Products
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (pens == null)
+            if (products == null)
             {
                 return NotFound();
             }
 
-            return View(pens);
+            return View(products);
         }
 
-        // POST: Pens/Delete/5
+        // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Pens == null)
+            if (_context.Products == null)
             {
-                return Problem("Entity set 'PenContext.Pens'  is null.");
+                return Problem("Entity set 'Orion_PensContext.Products'  is null.");
             }
-            var pens = await _context.Pens.FindAsync(id);
-            if (pens != null)
+            var products = await _context.Products.FindAsync(id);
+            if (products != null)
             {
-                _context.Pens.Remove(pens);
+                _context.Products.Remove(products);
             }
-
+            
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PensExists(int id)
+        private bool ProductsExists(int id)
         {
-            return (_context.Pens?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Products?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

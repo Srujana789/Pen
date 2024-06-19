@@ -193,3 +193,11 @@ I added to the Pen database successfully
 15:54
 Updating data seed with new details
 
+2024-06-12
+1616
+Here we have done some mistake we created all the details in index page and sub page was not created.
+So i created a new controller named Products controller and moved all the seed data condents to products.
+
+1630
+controller successfully created and data successfully migrated.
+

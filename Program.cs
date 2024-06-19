@@ -2,7 +2,10 @@
 using Microsoft.Extensions.DependencyInjection;
 using Pen.Data;
 using Pen.Models;
+using Orion_Pens.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<Orion_PensContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Orion_PensContext") ?? throw new InvalidOperationException("Connection string 'Orion_PensContext' not found.")));
 builder.Services.AddDbContext<PenContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("PenContext") ?? throw new InvalidOperationException("Connection string 'PenContext' not found.")));
 

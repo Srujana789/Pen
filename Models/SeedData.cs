@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Orion_Pens.Data;
+using Orion_Pens.Models;
 using Pen.Data;
 using System;
 using System.Linq;
@@ -10,17 +12,17 @@ public static class SeedData
 {
     public static void Initialize(IServiceProvider serviceProvider)
     {
-        using (var context = new PenContext(
+        using (var context = new Orion_PensContext(
             serviceProvider.GetRequiredService<
-                DbContextOptions<PenContext>>()))
+                DbContextOptions<Orion_PensContext>>()))
         {
             // Look for any movies.
-            if (context.Pens.Any())
+            if (context.Products.Any())
             {
                 return;   // DB has been seeded
             }
-            context.Pens.AddRange(
-                new Pens
+            context.Products.AddRange(
+                new Products
                 {
                     Name = "Astra",
                     InkType = "Gel",
@@ -31,7 +33,7 @@ public static class SeedData
                     Retractable = "Yes",
                     Price = 400
                 },
-                new Pens
+                new Products
                 {
                     Name = "Kidzee",
                     InkType = "Gel",
@@ -42,7 +44,7 @@ public static class SeedData
                     Retractable = "Yes",
                     Price = 400
                 },
-                new Pens
+                new Products
                 {
                     Name = "Phoenix",
                     InkType = "Water",
@@ -53,7 +55,7 @@ public static class SeedData
                     Retractable = "Yes",
                     Price = 799
                 },
-                new Pens
+                new Products
                 {
                     Name = "Monster",
                     InkType = "Gel",
@@ -64,7 +66,7 @@ public static class SeedData
                     Retractable = "Yes",
                     Price = 400
                 },
-                new Pens
+                new Products
                 {
                     Name = "Easybee",
                     InkType = "Gel",
