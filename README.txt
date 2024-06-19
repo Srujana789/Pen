@@ -207,3 +207,5 @@ Background changed as the visibility was very less with the contents.
 1700
 Updated index names to company name.
 
+1710
+Removed the privacy tab by commenting on layout page. executed successfully.
