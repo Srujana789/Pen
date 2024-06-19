@@ -1,27 +1,28 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
+
 body {
-    background-image: url('https://images.nightcafe.studio/jobs/aonOjtYAcQq6PG21pJw1/aonOjtYAcQq6PG21pJw1--1--1mxxg.jpg?tr=w-1600,c-at_max');
+    background-image: url('https://images.pexels.com/photos/5485176/pexels-photo-5485176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
     background-size: cover; /* This makes sure the image covers the entire background */
     background-repeat: no-repeat; /* This prevents the image from repeating */
     background-position: center center; /* This centers the image */
