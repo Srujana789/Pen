@@ -201,3 +201,5 @@ So i created a new controller named Products controller and moved all the seed d
 1630
 controller successfully created and data successfully migrated.
 
+1645
+Background changed as the visibility was very less with the contents.
