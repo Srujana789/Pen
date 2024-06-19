@@ -203,3 +203,6 @@ controller successfully created and data successfully migrated.
 
 1645
 Background changed as the visibility was very less with the contents.
+
+1700
+Updated index names to company name.
