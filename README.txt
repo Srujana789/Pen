@@ -209,3 +209,6 @@ Updated index names to company name.
 
 1710
 Removed the privacy tab by commenting on layout page. executed successfully.
+
+1730
+added about us page
