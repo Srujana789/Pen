@@ -1,3 +1,5 @@
+
+
 html {
     font-size: 14px;
 }
@@ -22,7 +24,7 @@ body {
 }
 
 body {
-    background-image: url('https://images.pexels.com/photos/5485176/pexels-photo-5485176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-image: url('/Images/BGimage.jpg');
     background-size: cover; /* This makes sure the image covers the entire background */
     background-repeat: no-repeat; /* This prevents the image from repeating */
     background-position: center center; /* This centers the image */
