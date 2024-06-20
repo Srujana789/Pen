@@ -218,3 +218,6 @@ Executed the command and confirmed all are working fine.
 1800
 Updated database and pushed all edited contents to GIT.
 All commands executed successfully.
+
+2255
+Updated background image as the background image was not apt for displaying the contents in the webpage.
