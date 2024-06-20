@@ -211,4 +211,6 @@ Updated index names to company name.
 Removed the privacy tab by commenting on layout page. executed successfully.
 
 1730
-added about us page
+added about us page by adding new page in home director. updated contents and added sytyling for the pages.
+Here i found some difficulties because default sytling was not apt for the page. then i googled and edited the styling which is apt for the page.
+Executed the command and confirmed all are working fine.
